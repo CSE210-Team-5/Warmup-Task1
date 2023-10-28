@@ -79,7 +79,7 @@
 			summaries;
 
 		// epub-type
-		summaries = document.querySelectorAll('[epub-type="stretchsummary"]');
+		summaries = document.querySelectorAll('[data-epub-type="stretchsummary"]');
 		Array.prototype.forEach.call(summaries, function(result){
 			results.push(result);
 		});
