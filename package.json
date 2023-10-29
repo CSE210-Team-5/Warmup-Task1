@@ -1,0 +1,14 @@
+{
+  "name": "warmup-task1",
+  "version": "0.0.1",
+  "description": "warmput task 1 for cse 210",
+  "main": "src/stretchtext.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
