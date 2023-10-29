@@ -1,0 +1,11 @@
+{
+  "name": "warmput-task1",
+  "version": "0.0.1",
+  "description": "task1",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
