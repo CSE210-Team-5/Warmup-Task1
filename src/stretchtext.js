@@ -87,11 +87,11 @@ function getSummaries () {
     results.push(result)
   })
 
-  // CSS class.
-  summaries = document.getElementsByClassName('stretchsummary')
-  Array.prototype.forEach.call(summaries, function (result) {
-    results.push(result)
-  })
+  // // CSS class.
+  // summaries = document.getElementsByClassName('stretchsummary')
+  // Array.prototype.forEach.call(summaries, function (result) {
+  //   results.push(result)
+  // })
 
   return results
 }
@@ -120,3 +120,5 @@ window.addEventListener('DOMContentLoaded', loaded)
 if (document.readyState === 'complete') {
   loaded()
 }
+
+module.exports = {getSummaries, setTitle, isBlockLevelDetail, findDetailFor}
