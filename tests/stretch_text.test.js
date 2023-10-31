@@ -1,4 +1,3 @@
-
 const modules = require('../src/stretchtext')
 const getSummaries = modules.getSummaries
 const setTitle = modules.setTitle
@@ -54,7 +53,7 @@ describe('findDetailFor', () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
-    it('checks if a html tag is <a> tag', () => {
+    it('checks if stretch text details are returned properly', () => {
     const parser = new DOMParser();
     const dom = parser.parseFromString('<!DOCTYPE html> <html lang="en"> <head> <title>Stretch Test</title> </head> <body><span><a href="#link">recursion</a><span id="link">nothing</span></span></body></html>', 'text/html');
     jest.spyOn(document, 'getElementById').mockImplementation(selector => dom.getElementById(selector));
