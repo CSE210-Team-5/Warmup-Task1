@@ -16,6 +16,10 @@ const requestAnimationFrame =
         window.setTimeout(callback, sixtyFPS)
       }
 
+/**
+ * Toggles the summary of a stretchtext element.
+ * @param {Event} evt The click event.
+ */
 function toggleSummary (evt) {
   // Prevent the text from being selected if rapidly clicked.
   evt.preventDefault()
@@ -46,10 +50,20 @@ function toggleSummary (evt) {
   })
 }
 
+/**
+ * Returns whether the given summary element has a block-level detail element.
+ * @param {HTMLElement} summary The summary element.
+ * @return {boolean} Whether the summary element has a block-level detail element.
+ */
 function isBlockLevelDetail (summary) {
   return summary.nodeName.toLowerCase() === 'a'
 }
 
+/**
+ * Sets the title of a stretchtext element.
+ * @param {HTMLElement} summary The summary element.
+ * @param {string} title The title to set.
+ */
 function setTitle (summary, title) {
   // If the user placed a manual title on the summary leave it alone.
   // REMOVED REDUNDANT IF/ELSE
@@ -58,6 +72,11 @@ function setTitle (summary, title) {
   }
 }
 
+/**
+ * Finds the detail element for a given summary element.
+ * @param {HTMLElement} summary The summary element.
+ * @return {HTMLElement} The detail element for the given summary element, or null if no detail element is found.
+ */
 function findDetailFor (summary) {
   // STREAMLINED TO ONE RETURN STATEMENT
   let detail
@@ -77,6 +96,10 @@ function findDetailFor (summary) {
   return detail
 }
 
+/**
+ * Gets all stretchtext summary elements in the document.
+ * @return {Array<HTMLElement>} An array of all stretchtext summary elements in the document.
+ */
 function getSummaries () {
   // Summaries are the thing that you click to expand
   const results = []
@@ -87,11 +110,11 @@ function getSummaries () {
     results.push(result)
   })
 
-  // // CSS class.
-  // summaries = document.getElementsByClassName('stretchsummary')
-  // Array.prototype.forEach.call(summaries, function (result) {
-  //   results.push(result)
-  // })
+  // CSS class.
+  summaries = document.getElementsByClassName('stretchsummary')
+  Array.prototype.forEach.call(summaries, function (result) {
+    results.push(result)
+  })
 
   return results
 }
