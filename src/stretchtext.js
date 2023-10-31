@@ -121,4 +121,7 @@ if (document.readyState === 'complete') {
   loaded()
 }
 
-module.exports = {getSummaries, setTitle, isBlockLevelDetail, findDetailFor}
+if (typeof module == 'object')
+{
+  module.exports = {getSummaries, setTitle, isBlockLevelDetail, findDetailFor}
+}
